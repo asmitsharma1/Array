@@ -12,13 +12,17 @@ int main(){
             scanf("%d",&arr[i]);
         }
         printf("enter the element which you want to delete ");
-        scanf("%d",pos);
+        scanf("%d",&pos);
+        if(pos<=size){
         for(i=pos-1;i<size-1;i++){
-            arr[i+1]=arr[i];
+            arr[i]=arr[i+1];
         }
         printf("updated array is ");
-        for(i=0;i<size;i++){
-            printf("arr[%d]=%d",i,arr[i]);
+        for(i=0;i<size-1;i++){
+            printf("arr[%d]=%d\n",i,arr[i]);
         }
+    }else{
+        printf("invalid pos");
+    }
     }
 }
